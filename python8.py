@@ -8,3 +8,4 @@ def sumindices(arr,target):
         cache[a]=i
 
 sumindices([1,2,3,4],5 )
+

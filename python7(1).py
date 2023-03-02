@@ -10,6 +10,9 @@ def commonprefix(str):
 print(commonprefix(['abc','ab','abcd']))
 
 
+
+
+
 #time complexity is 2 because 
 #if time complexity = 0(we should find(number of words*length of the shortest word))
 #then,i is the lenght of the shortest word and i+1 is the number of words in array.

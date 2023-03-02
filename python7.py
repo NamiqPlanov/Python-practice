@@ -16,6 +16,10 @@ def commonprefix(str):
 print(commonprefix([]))
 
 
+
+
+
+
 # it is not constant for space complexity because the prefix is dependent on the  shortest word in string array!
 #it is linear for time complexity because of prefixes. as much prefixes there are, as much the solutions
 
