@@ -5,7 +5,8 @@ def Countwords(word1,word2):
         if word1.count(i) ==1 and word2.count(i)==1:
             answer+=1
     return answer
-print(Countwords(['Boy','Friend','Hello'], ['Goodbye','Hello','Boy']))
+print(Countwords(['Hello','Friend'], ['Goodbye','Hello','Boy']))
+print(Countwords(['Hello','Friend','Goodbye'], ['Goodbye','Hello','Boy']))
 
 
 

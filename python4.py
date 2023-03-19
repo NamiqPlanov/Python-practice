@@ -1,13 +1,14 @@
-def SumArrays(arr, numofConselem ,target):
-    for i in range(len(arr)-numofConselem):
+def sum(arr,numsofconselem,target):
+    for i in range(len(arr)-numsofconselem):
         s = arr[i]
-        for j in range(i+1, i+numofConselem):
-            s += arr[j]
-        if s < target:
+        for j in range(i+1,i+numsofconselem):
+            s+=arr[i]
+        if s<target:
             return True
     return False
 
-print ( SumArrays([1, 2, 3, 4, 5], 10, 3))
+print(sum([1,2,3,4,5,6], 3, 7))
+        
 
 
 

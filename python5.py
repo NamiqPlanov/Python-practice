@@ -12,3 +12,6 @@ def Palindrome(x):
 print(Palindrome(121))
 
 
+
+
+
