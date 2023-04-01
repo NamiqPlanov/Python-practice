@@ -1,12 +1,22 @@
 
-#triangle
-#n = int(input('enter number of rows: '))
-#for i in range(n):
-#    for j in range(n-i-1):
- #       print(" ",end = "")
- #   for j in range(i+1):
- #       print("*",end=" ")
- #   print()
+n1 = int(input('enter number of rows:'))
+for i in range(n):
+    for j in range(n):
+        if i==n-1 or j==n-1 or i+j==n-1:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+
+
+n = int(input('enter number of rows: '))
+for i in range(n):
+    for j in range(n-i-1):
+        print(" ",end = "")
+    for j in range(i+1):
+        print("*",end=" ")
+    print()
 
     
 
