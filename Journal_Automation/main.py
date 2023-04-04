@@ -1,10 +1,24 @@
 from student import *
 from group import *
+from subject import *
 
 
-namiq = Student('Namiq','Planov','Saleh')
-zaur  = Student('Zaur', 'Qurbanov','Ibrahimovic')
 
-print(namiq.getFullName())
+Namiq = Student('Namiq','Planov','Saleh')
+print(Namiq.GetfullName())
 
-group = Group('2450i', 'Qumru')
+Ali = Student('Ali','Abdullayev','Konul')
+print(Ali.GetfullName())
+Eltun = Student('Eltun','Xelilov')
+Eltun.father_name = 'Nemet'
+print('Eltun is starosta',Eltun.isstarosta())
+Namiq.makestarosta()
+
+group = Group('2450i', Namiq)
+print('group:',group)
+
+Mammad = Teacher('Mammad', 'Shahmaliyev')
+print('teacher:',Mammad)
+
+subject = Subject('Object Oriented Programming', 'OOP')
+print('subject:',subject)
