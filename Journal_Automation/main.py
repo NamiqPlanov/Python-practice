@@ -1,24 +1,17 @@
-from student import *
-from group import *
-from subject import *
+from journal import *
 
+namiq = Student('Namiq','Planov','Saleh')
+eli = Student('Eli','Abdullayev','Konul')
+qumru = Student('Qumru','Eliyeva')
+qumru.makeStarosta()
 
+group_2450i = Group('2450i', qumru)
+subject_oop = Subject('Object Oriented Programming','OOP')
+mammad = Teacher('Mammad','Shahmaliyev','Oqtay',subject_oop)
 
-Namiq = Student('Namiq','Planov','Saleh')
-print(Namiq.GetfullName())
+group_2450i.addStudent(namiq)
+group_2450i.addStudent(eli)
 
-Ali = Student('Ali','Abdullayev','Konul')
-print(Ali.GetfullName())
-Eltun = Student('Eltun','Xelilov')
-Eltun.father_name = 'Nemet'
-print('Eltun is starosta',Eltun.isstarosta())
-Namiq.makestarosta()
-
-group = Group('2450i', Namiq)
-print('group:',group)
-
-Mammad = Teacher('Mammad', 'Shahmaliyev')
-print('teacher:',Mammad)
-
-subject = Subject('Object Oriented Programming', 'OOP')
-print('subject:',subject)
+group_2450i.addSubject(subject_oop)
+group_2450i.printStudentList()
+group_2450i.printSubject()

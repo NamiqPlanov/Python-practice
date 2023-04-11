@@ -1,3 +1,4 @@
+'''
 def isvalid(str):
     stack = []
     clostoopen = {')':'(',']':'[','{':'}'}
@@ -13,7 +14,21 @@ def isvalid(str):
     return True if not stack else False
 
 print(isvalid('[)'))
-
+'''
+def valid(s):
+    stack = []
+    closetoopen = {')':'(',']':'[','}':'{'}
+    for i in s:
+        if i in closetoopen:
+            if stack and stack[-1]==closetoopen[i]:
+                stack.pop()
+            else:
+                return False
+            
+        else:
+            stack.append(i)
+    return True if not stack else False
+'''
 
 def isvalid2(str2):
     stack2 = []
@@ -30,3 +45,4 @@ def isvalid2(str2):
     return True if not stack2 else False
 
 print(isvalid2('[)'))
+'''
