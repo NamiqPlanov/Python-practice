@@ -60,3 +60,22 @@ class Group:
 
     def __str__(self)->str:
         return 'Group- {},starosta-{}'.format(self.name,self.starosta)
+
+
+class JournalRecord:
+    def __init__(self,date:str,subject:Subject,type1:str,hour:int,student:Student,is_presence:bool,mark:int=None,  )->None:
+        self.date = date
+        self.subject = subject
+        self.type1 = type1
+        self.hour = hour
+        self.student = student
+        self.mark = mark
+        self.is_presence = is_presence
+
+class Journal:
+    def __init__(self,semestr:int,group:Group, kafedra:str):
+        self.semestr = semestr
+        self.group = group
+        self.kafedra = kafedra
+
+    

@@ -1,4 +1,4 @@
-def reverseList(head):
+'''def reverseList(head):
     current = head
     previous = None
     while current:
@@ -8,4 +8,8 @@ def reverseList(head):
         current = temp
     return previous
 print(reverseList([1,2,3,4,5]))
+'''
+
+
+
 

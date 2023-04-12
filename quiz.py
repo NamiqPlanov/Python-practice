@@ -27,7 +27,7 @@ else:
     points-=50
 
 question = input('Who is the president of Russia?')
-if question.lower() =='Putin qagas':
+if question.lower() =='Putin ':
     print('Correct! 😉')
     points+=150
 else:
