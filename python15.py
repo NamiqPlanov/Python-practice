@@ -5,3 +5,4 @@ def MissingNumber(arr):
         if number not in arrset:
             return number
 print(MissingNumber([0,1,3]))
+

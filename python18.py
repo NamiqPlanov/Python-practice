@@ -1,4 +1,4 @@
-def kmissing(arr,k):
+def kthmissing(arr,k):
     set1 = set(arr)
     i = 1
     while True:
@@ -8,4 +8,4 @@ def kmissing(arr,k):
             return i
         i+=1
     return i
-print(kmissing([1,2,3,4,5], 4))
+print(kthmissing([1,3,4,5,6], 1))

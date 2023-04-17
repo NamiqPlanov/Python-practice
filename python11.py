@@ -6,3 +6,5 @@ def elementexists(arr,target):
             return True
     return False
 print(elementexists([1,2,3,4],2))
+
+
