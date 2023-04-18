@@ -1,10 +1,12 @@
-def permutation(arr):
-    n = len(arr)
-    answer = []
+
+
+
+def perm(nums):
+    n = len(nums)
+    ans = []
     for i in range(n):
-        value = arr[arr[i]]
-        answer.append(value)
 
-    return answer
-
-print(permutation([1,2,3,4]))
+      val = nums[nums[i]]
+      ans.append(val)
+    return ans
+print(perm([4,5,6,2]))
