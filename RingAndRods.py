@@ -8,3 +8,4 @@ def RingRods(rings):
         if len(j)>=3:
             answer+=1
     return answer
+

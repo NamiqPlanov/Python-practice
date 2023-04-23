@@ -7,3 +7,4 @@ def countJewels(J,S):
     return count
 
 print(countJewels(J='hello', S='aaz'))
+

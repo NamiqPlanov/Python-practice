@@ -7,3 +7,4 @@ def SaemOcurrence(s):
     return True
 
 print(SaemOcurrence('aabbcc'))
+

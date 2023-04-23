@@ -1,9 +1,16 @@
-from cardholder import cardholder
+from cardholder import cardHolder
 def print_data_az():
-    print('Bunlardan birini seçin')
+    question = input('Bunlardan birini seçin')
     print('1.Depozit')
     print('2.Pul çəkmək')
     print('3.Balans')
+    if question =='1':
+        deposit_az()
+    elif question =='2':
+        withdraw_az()
+    elif question=='3':
+        check_balance_az()
+    
 
 def deposit_az(cardholder):
     try:
@@ -74,6 +81,7 @@ def check_balance_az(cardholder):
         else:
             option =0
     print('Təşəkkür edirik')
+print_data_az()
 
 
 

@@ -9,3 +9,5 @@ def RichestCostumer(accounts):
     return answer
 
 print(RichestCostumer([[1,10,6],[2,15,4]]))
+
+

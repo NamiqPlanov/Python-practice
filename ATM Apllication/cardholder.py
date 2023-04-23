@@ -1,4 +1,4 @@
-class cardholder:
+class cardHolder:
     def __init__(self,cardNumber:int,pin:int,first_name:str,last_name:str,balance:float):
         self.cardNumber = cardNumber
         self.pin = pin

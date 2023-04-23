@@ -7,3 +7,6 @@ def repeated(arr):
             return i
 
 print(repeated([1,2,3,2]))
+
+
+    

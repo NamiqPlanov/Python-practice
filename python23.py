@@ -10,3 +10,6 @@ def perm(nums):
       ans.append(val)
     return ans
 print(perm([4,5,6,2]))
+
+
+

@@ -7,3 +7,5 @@ def shufflearray (arr,n):
     return answer
 
 print(shufflearray([1,2,3,4], 3))
+
+
