@@ -6,3 +6,5 @@ def GroupAnagram(strs):
             sts_table[sorted_str] = []
         sts_table[sorted_str].append(str1)
     return list(sts_table.values())
+
+print(GroupAnagram(['eat','rat','bat','ate']))
