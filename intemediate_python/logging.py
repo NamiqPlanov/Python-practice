@@ -1,2 +1,4 @@
 import logging
-logging.warning('this is a debug message')
+logging.basicConfig(level=logging.DEBUG,format='%(asctime)s-%(name)s-%(message)s',datefmt='%Y/%m/%d %H:%M:%S')
+logger = logging.getLogger(__name__)
+logger.debug('this is debug')
