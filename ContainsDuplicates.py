@@ -8,3 +8,4 @@ def duplicate(arr):
             return True
     return False
 print(duplicate([1,1,2,3,4,5]))
+

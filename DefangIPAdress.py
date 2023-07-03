@@ -1,4 +1,4 @@
-def IPAdress(adress):
+'''def IPAdress(adress):
    y = ''
    for x in adress:
     if x.isdigit():
@@ -6,4 +6,5 @@ def IPAdress(adress):
     else:
         y = y+'[.]'
    return y
-print(IPAdress('355.55.01'))
+print(IPAdress('355.55.01'))'''
+

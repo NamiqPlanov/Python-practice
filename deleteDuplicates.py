@@ -14,3 +14,4 @@ def showunique(arr2):
     arr2 = list(set(arr2))
     return str(arr2)
 print(showunique([1,2,3,3,3,4,5]))
+

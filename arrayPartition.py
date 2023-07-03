@@ -6,3 +6,9 @@ def arrpartition(arr):
         sum1+=arr[i]
     return sum1
 print(arrpartition([1,2,3,6]))
+
+
+
+
+
+
