@@ -1,37 +1,54 @@
-'''
-list2 = [5,False,'app','app']
-list2.append('Namiq')
-list2.insert(3, 'Hello')
-print(list2)
+list1 = [1,True,'John','acac','acve']
+item = list1[:]
+if len(list1)>3:
+    list1.insert(2,'Ayxan')
+    print(list1)
+else:
+    print('false')
 
-list1 = [10,3,2,5,6,4,-3]
-newlist = sorted(list1)
-print(newlist)
-
-n = int(input('how many times:'))
-listn = [5] *n
-mylist2 = [10,20,30,40]
-newl = listn+mylist2
-print(newl)
-list1 = ['hello','bro','how','are','you']
-list2 = list(list1)
-
-
-list2.append('qaqas')
+print(type(list1))
+list1.append('abcds')
 print(list1)
 
+list1.extend(['hello','bro'])
+print(list1)
+print(list1.index('acac'))
+
+
+list2 = [123,543,234,567]
+max1 = max(list2)
+print(max1)
+print(list2.index(max1))
+print(list2.count(123))
+
+list2.reverse()
 print(list2)
-list3 = ['a','b','c','d']
-list4 = list3[:]
-list4.insert(2, 'e')
+list2.remove(543)
+print(list2)
+list2.pop(2)
+print(list2)
+
+
+list2.clear()
+print(list2)
+list2.append(['hello','abi','eqc',23])
+print(list2)
+
+list3 = list2.copy()
 print(list3)
+list4 = [12,1,14,5,3]
+list4.sort()
 print(list4)
-list5 = [1,2,3,4,5,6]
-list6 = [i+i for i in list5]
-list7 = [i*i for i in list5]
-print(list6)
-print(list7)
-'''
+lsitfinal = list1+list2
+print(lsitfinal)
+number_list = [1,2,4,5,7,8]
+product_list = [i+i for i in number_list]
+print(product_list)
+    
+
+
+        
+        
 
 
 

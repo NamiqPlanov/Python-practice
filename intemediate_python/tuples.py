@@ -1,39 +1,23 @@
 import sys
-tuple1 = ("Baki","Namiq","Ayxan")
-list1 = ['Baki','Namiq','Ayxan']
-print(sys.getsizeof(tuple1),'bytes')
-print(sys.getsizeof(list1),'bytes')
-
-'''
+tuple1 = tuple([1,2,3,4,5,1,2])
 print(tuple1)
-
 for i in tuple1:
-    print(i)
+    if i==0 or i%2==0 :
+        print(tuple1[i])
+tuple2 = set(tuple1)
+print(tuple2)
+print(tuple1.count(2))
+print(tuple1.index(5))
 
-if 'Bak' in tuple1:
-    print('yes')
-else:
-    raise Exception('no!')
-
-    
-list1 = list(tuple1)
-print(list1 )
-
-city,name,brother = tuple1
-print(city)
-print(name)
-print(brother)
+player = 'Emil','Balayev','GK'
+first_name,last_name,position = player
+print('{},{},{}'.format(first_name,last_name,position))
 
 
-tuple2 = [1,2,3,4,5,6]
-a1,*a2,a3 = tuple2
-print(a2)
-print(a3)
-print(a1)'''
-
-import timeit
-print(timeit.timeit(stmt="[1,2,3,4]",number=10))
-print(timeit.timeit(stmt="(1,2,3,4)",number=10))
+list1 = list([1,2,3,4,5,6,7])
+list2 = tuple([1,2,3,4,5,6,7])
+print(sys.getsizeof(list1),'bytes')
+print(sys.getsizeof(list2),'bytes')
 
 
 

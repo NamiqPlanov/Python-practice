@@ -1,55 +1,29 @@
-dict1={
-    'name':'Namiq',
-    'last_name':'Planov',
-    'age':19,
-    'city':'Baku'
-}
-'''print(dict1)
-dict2 = dict(name='Namiq',age=19,city='Baku')
-print(dict2)
-
-
-val1 = dict1['name']
-val2 = dict1['last_name']
-print(val1)
-print(val2)
-dict1['region']='Nesimi'
+dict1 = {'name':'Namiq','lastname':'Planov'}
+'''
 print(dict1)
-del dict1['last_name']
+name = dict1['name']
+print(name)
+add = dict(name='Ayxan',lastname='Planov')
+print(add)
+dict1['year'] = 2003
 print(dict1)
-dict1.pop('name')
+del dict1['name']
+print(dict1)
+dict1.pop('lastname')
 print(dict1)
 dict1.popitem()
 print(dict1)
-
-
-
-if 'name' in dict1:
-    print(dict1['name'])
-else:
-    raise Exception('no')
-
 try:
-    print(dict1['region'])
+    print(len(dict1))
 except:
-    print('noo')
+    print('no')
 
-
-for key in dict1.keys():
-    print(key)
-for val in dict1.values():
-    print(val)
-
-for key,val in dict1.items():
-    print(key,'-',val)
-
-dict2 = dict1.copy()
-dict2['name'] = 'Ayxan'
-print(dict2)
-print(dict1)
+for key,values in dict1.items():
+    print(key,'-',values)
 '''
-dict2 = dict(name='Ayxan',age=15,city='Shamakhi')
-dict1.update(dict2)
-print(dict1)
 
-    
+dict2 = dict(name='Ayxan',lastname='Planov')
+print(dict1)
+print(dict2)
+dict2.update(dict1)
+print(dict2)
