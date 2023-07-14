@@ -1,3 +1,4 @@
+
 def chesscolor(s):
     if s[0] =='a' or s[0]=='c' or s[0]=='e' or c[0]=='g':
         if int(s[1])%2==0:
