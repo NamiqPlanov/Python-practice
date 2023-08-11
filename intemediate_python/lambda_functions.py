@@ -1,39 +1,44 @@
-from functools import reduce
-'''
-number = int(input('enter number for subtraction:'))
-subtraction = lambda a:a-number
-print(subtraction(20))
+''' from functools import reduce
+minus_10 = lambda a:a-10
+print(minus_10(15))
 
-sum1 = lambda c,d: c+d
+def minus_5(a):
+    return a-10
+print(minus_5(3))
+
+multiple_nmbers = lambda c,d:c*d
+print(multiple_nmbers(2,3))
+
+coordinates = [(1,2),(-2,4),(12,15)]
+sorted_coordinates = sorted(coordinates)
+sorted_y = sorted(coordinates,key=lambda x:x[1])
+print(sorted_coordinates)
+print(sorted_y)
+
+arr = [10,12,13,1,4,11]
+mult = map(lambda a:a*2,arr)
+print(list(mult))
+mult2 = [e*2 for e in arr]
+print(mult2)
+
+arr2 = [12,13,14,15,17,18]
+even = filter(lambda f:f%2==0,arr2)
+print(list(even))
+
+even2 = [g for g in arr2 if g%2==0]
+print(even2) 
+
+k = [1,2,3,4,5,6]
+product = reduce(lambda x,y:x*y,k)
+print(product)
+'''
+sum1 = lambda x,y:x+y
 print(sum1(3,4))
 
+coordinates = [(1,2,3),(5,-6,-2),(11,23,14),(12,13,0)]
+sorted1 = sorted(coordinates,key=lambda a:a[2])
+print(list(sorted1))
 
-
-points2D = [(1,3),(-4,7),(-3,9),(10,16)]
-sorting_in_espect_with_y = sorted(points2D,key=lambda x:x[1])
-sorting_in_espect_with_x = sorted(points2D,key=lambda x:x[0])
-print(sorting_in_espect_with_y)
-print(sorting_in_espect_with_x)
-'''
-
-
-list1 = [10,20,13,15,16,9,11]
-list2 = map(lambda x:(x*2)+2,list1)
-list3 = sorted(list2)
-print(list(list2))
-print(list(list3))
-
-
-list4 = [a*2+2 for a in list1]
-print(list4)
-
-even_numbers = filter(lambda y:y%2==0, list1)
-print(list(even_numbers))
-
-
-even_numbers_for = [b for b in list(list1) if b%2==0]
-print(sorted(even_numbers_for))
-
-
-list6 = reduce(lambda x,y:x+y, list1)
-print(list6)
+arr = [1,2,3,4,5,6]
+arr_map = map(lambda b:b*2-3,arr)
+print(list(arr_map))
