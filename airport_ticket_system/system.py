@@ -29,7 +29,7 @@ class Booking:
             passport = str(input('enter you passport sery:'))
             citizenship = input('enter the country of which guest is citizen:')
             seat_num = int(input('enter the seat number please:'))
-            seats = True * number_of_seats
+            seats = [True] * number_of_seats
             if seat_num<1 or seat_num >number_of_seats:
                 seat_num = int(input('Invalid seat number.Please enter valid seat number:'))
             elif seats[seat_num-1]:
