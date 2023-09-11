@@ -1,10 +1,11 @@
-def GroupAnagram(strs):
-    sts_table = {}
-    for str1 in strs:
-        sorted_str = ''.join(sorted(str1))
-        if sorted_str not in sts_table:
-            sts_table[sorted_str] = []
-        sts_table[sorted_str].append(str1)
-    return list(sts_table.values())
+def GroupAnagram(strs,defaultdict):
+    res = defaultdict(list)
+    for s in strs:
+      count = [0]*26
+      for c in s:
+          count[ord(c)-ord('a')]+=1
+          res[tuple(count)].append(s)
+    return res.values()
+
 
 print(GroupAnagram(['eat','rat','bat','ate']))
