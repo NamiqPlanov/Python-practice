@@ -10,12 +10,14 @@ class Booking:
         print(dash2)
         seats = input('Which of seats are you interested in?')
         print(seats)
-        if seats == 'econom class':
+        if seats == 'econom class' or seats=='econom':
             print('the price of the seat of the econom class is 70 AZN')
-        elif seats =='standart class':
+        elif seats =='standart class' or seats =='standart':
              print('the price of the seat of the standart class is 150 AZN')
-        else:
+        elif seats =='vip' or seats=='vip class':
              print('the price of the seat of the VIP class is 270 AZN')
+        else:
+            input('not valid class of seats.Enter valid class:')
     def buying_ticket(self):
         g = 0
         number_of_seats = 200
@@ -32,11 +34,14 @@ class Booking:
             seats = [True] * number_of_seats
             if seat_num<1 or seat_num >number_of_seats:
                 seat_num = int(input('Invalid seat number.Please enter valid seat number:'))
+                
             elif seats[seat_num-1]:
                 buying = input('This seat is available.Your bought this seat.Thank you {}😊'.format(first_name))
+                
             else:
                 taken_seat = int(input('Seat {} is taken unfortuntely😥.Please enter the free seat:'))
                 print('thank you')
+                
                 
 
                     

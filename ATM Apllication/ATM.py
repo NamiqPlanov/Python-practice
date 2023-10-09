@@ -1,11 +1,8 @@
 from cardholder import cardHolder
 def print_data_az():
-    question = input('Bunlardan birini seçin')
-    print('1.Depozit')
-    print('2.Pul çəkmək')
-    print('3.Balans')
+    question = input('Bunlardan birini seçin:1.Depozit 2.Pul cekmek 3.Balans ')
     if question =='1':
-        deposit_az()
+        deposit_az(cardHolder)
     elif question =='2':
         withdraw_az()
     elif question=='3':
