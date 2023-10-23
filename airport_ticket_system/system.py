@@ -25,8 +25,7 @@ CREATE TABLE IF NOT EXISTS bookings_db (
     airport VARCHAR(255),  
     luggages INT,
     seat_num INT,
-    payment INT,
-    timestamp TIMESTAMP
+    payment FLOAT
 )
 
 ''')
@@ -69,9 +68,9 @@ class Booking:
              print('the price of the seat of the VIP class is 270 AZN')
         else:
             input('not valid class of seats.Enter valid class:')
-    def buying_ticket(self,seats,payment):
+    def buying_ticket(self,seats):
         number_of_seats = 200
-        timestamp = datetime.now()
+        
         
         while True:
             self.first_name = input('enter first name:')
@@ -89,23 +88,24 @@ class Booking:
             seat_num = int(input('enter the seat number please:'))
             if age<14:
                 if seats == 'econom':
-                    payment = (70-(70/4))+(luggages*80)
+                    self.payment += (70-(70/4))+(luggages*80)
                     print('Payment will be {} AZN'.format(payment))
                 elif seats == 'standart':
-                    payment = (150-(150/4))+(luggages*80)
+                    self.payment += (150-(150/4))+(luggages*80)
                     print('Payment will be {} AZN'.format(payment))
                 elif seats == 'vip':
-                    payment = (270-(270/4))+(luggages*80)
+                    self.payment += (270-(270/4))+(luggages*80)
                     print('Payment will be {} AZN'.format(payment)) 
             else:
                 if seats == 'econom':
-                    payment = (70)+(luggages*80)
+                    self.payment += (70)+(luggages*80)
                     print('Payment will be {} AZN'.format(payment))
                 elif seats == 'standart':
-                    payment = (150)+(luggages*80)
+                    self.payment += (150)+(luggages*80)
                     print('Payment will be {} AZN'.format(payment))
                 elif seats == 'vip':
-                    payment = (270)+(luggages*80)
+                    self.payment += (270)+(luggages*80)
+                    
                     print('Payment will be {} AZN'.format(payment))
             seats = [True] * number_of_seats
             if seat_num<1 or seat_num >number_of_seats:
