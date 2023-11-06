@@ -4,7 +4,7 @@ dict1 = {'Name':['Namiq','Ayxan','Ilkin','Eli','Eltun','Esed','Zaur'],
 'Age':[19,16,21,20,21,20,19],
 'Points':[93,94,91,92,85,86,93]}
 data = pd.DataFrame(dict1)
-'''print(data.head(3))
+print(data.head(3))
 print(data.tail(3))
 print('the number of rows and columns are {}'.format(data.shape))
 print('Number of rows is {}'.format(data.shape[0]))
@@ -15,7 +15,8 @@ print(data.isnull().sum())
 print(data.isnull())
 print(data.describe())
 print(data.describe(include='all'))
-print(data)print(data['Name'])
+print(data)
+print(data['Name'])
 print(data['Name'].unique())
 print(data['Name'].nunique())
 print(data['Age'].value_counts())
@@ -41,7 +42,7 @@ print(data['Baku or other city'])
 print(data['Age']>19)
 print(data.drop(['Age'],axis=1))
 print(data.columns)
-'''
+
 print(data.sort_values(by = 'Points'))
 print(data.sort_values(by='Age'))
 

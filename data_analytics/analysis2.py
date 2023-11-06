@@ -1,7 +1,7 @@
 import pandas as pd
 
 data = pd.read_csv('data_analytics/dataset1')
-'''print('number of rows is {},number of columns is {}'.format(data.shape[0],data.shape[1]))
+print('number of rows is {},number of columns is {}'.format(data.shape[0],data.shape[1]))
 print(data.head(6))
 print(data.tail(6))
 print(data.dtypes)
@@ -36,7 +36,7 @@ def expiration_date():
     return count
 print(expiration_date())
 print(len(data[data['CC Exp Date'].apply(lambda x:x[3:]=='20')]))
-'''
+
 
 
 
