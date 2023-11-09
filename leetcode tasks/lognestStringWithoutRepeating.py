@@ -1,15 +1,12 @@
-def function(s):
-    charSet = set()
+def largestsubstring(s):
+    charset = set()
     l = 0
-    ans = 0
-    n = len(s)
-    for i in range(n):
-        while s[i] in charSet:
-            charSet.remove(s[l])
+    res = 0
+    for r in range(len(s)):
+        while s[r] in charset:
+            charset.remove(s[l])
             l+=1
-        charSet.add(s[i])
-        ans = max(ans, i-l+1)
-
-    return ans
-
-print(function('abcdabcde'))
+        charset.add(s[r])
+        res = max(res,r-l+1)
+    return res
+print(largestsubstring('abcde'))
