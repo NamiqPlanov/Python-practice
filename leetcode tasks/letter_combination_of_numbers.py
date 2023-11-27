@@ -9,7 +9,7 @@ def comb(digits):
             "8":"tuv",
             "9":"wxyz"}
     def backtrack(i,curstr):
-        if len(curstr) ==len(digits):
+        if len(curstr)==len(digittochar):
             res.append(curstr)
             return
         for c in digittochar[digits[i]]:
@@ -18,5 +18,4 @@ def comb(digits):
         backtrack(0,"")
     return res
 
-print(comb("23"))
-        
+print(comb("24"))
