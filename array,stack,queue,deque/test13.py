@@ -1,0 +1,13 @@
+stack = []
+stack.append(5)
+stack.append(2)
+stack.append(2)
+stack.append(4)
+stack.append(7)
+print(stack)
+unique1 = list(set(stack))
+print(unique1)
+unique1.insert(2,5)
+print(unique1)
+unique2 = list(set(unique1))
+print(unique2)

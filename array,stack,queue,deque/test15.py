@@ -1,0 +1,15 @@
+stack = []
+stack.append(4)
+stack.append(3)
+stack.append(2)
+stack.append(1)
+print(stack)
+modified1 = stack[:1]+stack[2:]
+print(modified1)
+stack.insert(0,-1)
+stack.insert(0,0)
+print(stack)
+stack.pop(0)
+stack.pop(4)
+stack.pop(1)
+print(stack)

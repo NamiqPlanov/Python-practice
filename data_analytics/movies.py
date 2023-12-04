@@ -6,7 +6,7 @@ import seaborn as sns
 data = pd.read_csv('data_analytics/IMDB-Movie-Data.csv')
 
 
-'''
+
 print(data.head(10))
 print(data.tail(10))
 
@@ -29,6 +29,6 @@ print(data.groupby('Year')['Revenue (Millions)'].mean())
 sns.barplot(x='Year',y='Revenue (Millions)',data=data)
 plt.show()
 print(data.groupby('Director')['Rating'].mean())
-'''
+
 data = data.dropna(axis = 0,inplace=True)
 print(type(data))
