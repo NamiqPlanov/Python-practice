@@ -1,18 +1,8 @@
-stack=[]
-stack.append(0)
-stack.append(1)
-stack.append(5)
-stack.append(2)
-stack.append(4)
-stack.append(7)
-print(stack)
-min1 = min(stack)
-print(min1)
-stack.remove(0)
-stack.remove(1)
-print(stack)
-stack.insert(0,-1)
-stack.insert(0,10)
-print(stack)
-min2 = min(stack)
-print(min2)
+list1 = []
+n = int(input('number of nodes:'))
+for i in range(n):
+    list1.append(int(input('enter node:')))
+print('Data={}'.format(list1))
+list1.remove(list1[0])
+for j in range(len(list1)):
+    print('Data={}'.format(list1[j]))

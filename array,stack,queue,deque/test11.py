@@ -1,15 +1,17 @@
-stack = []
-stack.append(5)
-stack.append(2)
-stack.append(4)
-stack.append(7)
-print(stack)
-max1 = max(stack)
-stack.remove(max1)
-print(stack)
-stack.insert(0,-1)
-stack.insert(0,20)
-print(stack)
-max2 = max(stack)
-stack.remove(max2)
-print(stack)
+from queue import Queue
+
+queue1 = Queue()
+n = int(input('How many nodes:'))
+for i in range(n):
+    queue1.put(int(input('add node:')))
+sum1 = 0
+count=0
+while not queue1.empty():
+    elem = queue1.get()
+    if elem%2!=0:
+        print(elem)
+        sum1+=elem
+        count+=1
+avg1 = sum1/count
+print(avg1)
+

@@ -1,6 +1,4 @@
 import mysql.connector
-from datetime import timedelta,datetime
-
 
 conn = mysql.connector.connect(
     host='127.0.0.1',
@@ -24,9 +22,10 @@ CREATE TABLE IF NOT EXISTS bookings_db (
     country VARCHAR(255),
     airport VARCHAR(255),  
     luggages INT,
-    seat_num INT,
-    payment FLOAT
+    seat_num INT
+
 )
+
 
 ''')
 
@@ -45,7 +44,9 @@ class Booking:
         self.airport = ""
         self.luggages = ""
         self.seat_num = ""
-        self.payment = 0
+
+
+
 
 
     def info(self):
@@ -70,6 +71,7 @@ class Booking:
             input('not valid class of seats.Enter valid class:')
     def buying_ticket(self,seats):
         number_of_seats = 200
+        self.payment = 0
         
         
         while True:
@@ -86,26 +88,25 @@ class Booking:
             
             luggages = int(input('how many additional luggages will you take with you into the plane? One luggage is 80 AZN.-'))
             seat_num = int(input('enter the seat number please:'))
-            if age<14:
+            if age < 14:
                 if seats == 'econom':
-                    self.payment = int((70-(70/4))+(luggages*80))
+                    self.payment += int((70 - (70 // 4)) + (luggages * 80))
                     print('Payment will be {} AZN'.format(self.payment))
                 elif seats == 'standart':
-                    self.payment = int((150-(150/4))+(luggages*80))
+                    self.payment += int((150 - (150 // 4)) + (luggages * 80))
                     print('Payment will be {} AZN'.format(self.payment))
                 elif seats == 'vip':
-                    self.payment = int((270-(270/4))+(luggages*80))
-                    print('Payment will be {} AZN'.format(self.payment)) 
+                    self.payment += int((270 - (270 // 4)) + (luggages * 80))
+                    print('Payment will be {} AZN'.format(self.payment))
             else:
                 if seats == 'econom':
-                    self.payment = int((70)+(luggages*80))
+                    self.payment += int((70) + (luggages * 80))
                     print('Payment will be {} AZN'.format(self.payment))
                 elif seats == 'standart':
-                    self.payment = int((150)+(luggages*80))
+                    self.payment += int((150) + (luggages * 80))
                     print('Payment will be {} AZN'.format(self.payment))
                 elif seats == 'vip':
-                    self.payment = int((270)+(luggages*80))
-                    
+                    self.payment += int((270) + (luggages * 80))
                     print('Payment will be {} AZN'.format(self.payment))
             seats = [True] * number_of_seats
             if seat_num<1 or seat_num >number_of_seats:
@@ -113,9 +114,9 @@ class Booking:
                 
                 
             elif seats[seat_num-1]:
-                cursor.execute("INSERT INTO bookings_db (first_name, last_name, age, passport, citizenship, plane, country, airport,luggages, seat_num, payment) "
-               "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)",
-               (self.first_name, self.last_name, age, passport, citizenship, plane, country, airport,luggages,seat_num, self.payment))
+                cursor.execute("INSERT INTO bookings_db (first_name, last_name, age, passport, citizenship, plane, country, airport,luggages, seat_num) "
+               "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+               (self.first_name, self.last_name, age, passport, citizenship, plane, country, airport,luggages,seat_num))
                 conn.commit()
                 buying = print('This seat is available.Your bought this seat.Thank you {}😊'.format(self.first_name))
                 break
